@@ -1,6 +1,5 @@
-using System;
 
-namespace Zarządzanie_Lotniskiem.Models
+namespace AirportManager.Models
 {
     public class ErrorViewModel
     {

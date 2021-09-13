@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Threading.Tasks;
-using Zarządzanie_Lotniskiem.Models;
+using AirportManager.Models;
 
-namespace Zarządzanie_Lotniskiem.DAL
+namespace AirportManager.DAL
 {
     public class AirportContext : DbContext
     {
@@ -16,7 +12,7 @@ namespace Zarządzanie_Lotniskiem.DAL
         }
 
         public DbSet<Profile> Profiles { get; set; }
-        
+
         public DbSet<City> Cities { get; set; }
 
         public DbSet<Country> Countries { get; set; }

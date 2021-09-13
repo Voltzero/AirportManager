@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Zarządzanie_Lotniskiem.Models
+﻿
+namespace AirportManager.Models
 {
     public class Profile
     {

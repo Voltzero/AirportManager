@@ -2,10 +2,9 @@
 using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 using System.Data.Entity;
-using Zarządzanie_Lotniskiem.Models;
 using AirportManager.Models;
 
-namespace Zarządzanie_Lotniskiem.DAL
+namespace AirportManager.DAL
 {
     public class AirportInitializer : DropCreateDatabaseIfModelChanges<AirportContext>
     {
