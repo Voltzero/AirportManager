@@ -30,7 +30,7 @@ namespace AirportManager.Models
         [Required]
         public AirportType Type { get; set; }
 
-        public ICollection<Aircraft> Aircrafts { get; set; }
+        public virtual ICollection<Aircraft> Aircrafts { get; set; }
     }
 
     public enum AirportType

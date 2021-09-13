@@ -25,6 +25,8 @@ namespace AirportManager.DAL
 
         public DbSet<Luggage> Luggages { get; set; }
 
+        public DbSet<Flight> Flights { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

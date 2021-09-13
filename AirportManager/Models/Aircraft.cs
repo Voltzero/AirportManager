@@ -18,7 +18,7 @@ namespace AirportManager.Models
         public int? LuggageSpace { get; set; }
 
         [Required]
-        public ICollection<AircraftType> Types { get; set; }
+        public virtual ICollection<AircraftType> Types { get; set; }
     }
 
     public enum AircraftType

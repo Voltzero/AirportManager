@@ -97,6 +97,11 @@ namespace AirportManager.DAL
             airports.ForEach(airport => context.Airports.Add(airport));
             context.SaveChanges();
 
+            var flight = new Flight { Start = airports[0], Destination = airports[5], StartTime = new System.DateTime().AddDays(1) };
+
+            context.Flights.Add(flight);
+            context.SaveChanges();
+
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
 
