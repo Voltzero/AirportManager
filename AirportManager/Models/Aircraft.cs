@@ -15,14 +15,26 @@ namespace AirportManager.Models
         [Required]
         public int Seats { get; set; }
 
+        [Display(Name = "Pojemnośc (kg)")]
         public int? LuggageSpace { get; set; }
 
+        [Display(Name = "Typ samolotu")]
         [Required]
-        public virtual ICollection<AircraftType> Types { get; set; }
+        public AircraftType Type { get; set; }
     }
 
     public enum AircraftType
     {
-        Airliner, MilitaryPlane, Helicopter, CommuterAircraft
+        [Display(Name = "Samolot Pasażerski")]
+        Airliner,
+
+        [Display(Name = "Samolot Wojskowy")]
+        MilitaryPlane,
+
+        [Display(Name = "Helikopter")]
+        Helicopter,
+
+        [Display(Name = "Samolot podmiejski")]
+        CommuterAircraft,
     }
 }

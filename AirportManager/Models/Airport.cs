@@ -12,10 +12,14 @@ namespace AirportManager.Models
         public string Name { get; set; }
 
         [Required]
-        public string Country { get; set; }
+        public int CountryID { get; set; }
 
         [Required]
-        public string City { get; set; }
+        public int CityID { get; set; }
+
+        public virtual Country Country { get; set; }
+
+        public virtual City City { get; set; }
 
         [Display(Name = "Lokalizacja")]
         [Required]

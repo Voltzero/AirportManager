@@ -48,33 +48,33 @@ namespace AirportManager.DAL
             countries.ForEach(country => context.Countries.Add(country));
             context.SaveChanges();
 
-            var airliners = new List<AircraftType> { AircraftType.Airliner };
-            var airinerCommuters = new List<AircraftType> { AircraftType.Airliner, AircraftType.CommuterAircraft };
-            var helicopters = new List<AircraftType> { AircraftType.Helicopter };
-            var militaryHelicopters = new List<AircraftType> { AircraftType.MilitaryPlane, AircraftType.Helicopter };
+            var airliners = AircraftType.Airliner;
+            var commuters = AircraftType.CommuterAircraft;
+            var helicopters = AircraftType.Helicopter;
+            var militaryHelicopters = AircraftType.MilitaryPlane;
 
             var boeings = new List<Aircraft>
             {
-                new Aircraft{Name = "Boeing 747 8", Types = airliners, Seats = 660, LuggageSpace = 160000},
-                new Aircraft{Name = "Boeing 747 400", Types = airliners, Seats = 500, LuggageSpace = 130000},
-                new Aircraft{Name = "Boeing 747 300", Types = airliners, Seats = 400, LuggageSpace = 100000},
+                new Aircraft{Name = "Boeing 747 8", Type = airliners, Seats = 660, LuggageSpace = 160000},
+                new Aircraft{Name = "Boeing 747 400", Type = airliners, Seats = 500, LuggageSpace = 130000},
+                new Aircraft{Name = "Boeing 747 300", Type = airliners, Seats = 400, LuggageSpace = 100000},
             };
 
             var airbuses = new List<Aircraft>
             {
-                new Aircraft{Name = "Airbus A320 100", Types = airinerCommuters, Seats = 140, LuggageSpace = 30000},
-                new Aircraft{Name = "Airbus A320 200", Types = airinerCommuters, Seats = 160, LuggageSpace = 40000},
-                new Aircraft{Name = "Airbus A320 300", Types = airinerCommuters, Seats = 180, LuggageSpace = 50000},
+                new Aircraft{Name = "Airbus A320 100", Type = commuters, Seats = 140, LuggageSpace = 30000},
+                new Aircraft{Name = "Airbus A320 200", Type = commuters, Seats = 160, LuggageSpace = 40000},
+                new Aircraft{Name = "Airbus A320 300", Type = commuters, Seats = 180, LuggageSpace = 50000},
             };
 
             var military = new List<Aircraft>
             {
-                new Aircraft{Name = "Boeing CH-47 Chinook", Types = militaryHelicopters, Seats = 33, LuggageSpace = 10800},
+                new Aircraft{Name = "Boeing CH-47 Chinook", Type = militaryHelicopters, Seats = 33, LuggageSpace = 10800},
             };
 
             var lightHelicopters = new List<Aircraft>
             {
-                new Aircraft{Name = "Agusta A109", Types = helicopters, Seats = 8, LuggageSpace = 1000},
+                new Aircraft{Name = "Agusta A109", Type = helicopters, Seats = 8, LuggageSpace = 1000},
             };
 
             boeings.ForEach(aircraft => context.Aircrafts.Add(aircraft));
