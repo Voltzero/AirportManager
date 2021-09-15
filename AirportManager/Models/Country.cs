@@ -11,8 +11,14 @@ namespace AirportManager.Models
         [Required]
         public string Name { get; set; }
 
+        public IEnumerable<int> CitiesID { get; set; }
+
         [Display(Name = "Miasta")]
         public virtual ICollection<City> Cities { get; set; }
 
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }

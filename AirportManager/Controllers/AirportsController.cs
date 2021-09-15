@@ -39,6 +39,7 @@ namespace AirportManager.Controllers
         // GET: Airports/Create
         public ActionResult Create()
         {
+            ViewBag.CityID = new SelectList(db.Cities, "ID", "Name");
             return View();
         }
 
@@ -49,6 +50,7 @@ namespace AirportManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Name,Country,City,Type")] Airport airport)
         {
+            var countries = db.Countries;
             if (ModelState.IsValid)
             {
                 db.Airports.Add(airport);

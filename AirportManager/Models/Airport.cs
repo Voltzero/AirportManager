@@ -5,21 +5,24 @@ namespace AirportManager.Models
 {
     public class Airport
     {
+        public Airport()
+        {
+            Aircrafts = new HashSet<Aircraft>();
+        }
+
         public int ID { get; set; }
 
         [Display(Name = "Nazwa Lotniska")]
         [Required]
         public string Name { get; set; }
 
+        [Display(Name = "Państwo")]
         [Required]
-        public int CountryID { get; set; }
+        public string Country { get; set; }
 
+        [Display(Name = "Kraj")]
         [Required]
-        public int CityID { get; set; }
-
-        public virtual Country Country { get; set; }
-
-        public virtual City City { get; set; }
+        public string City { get; set; }
 
         [Display(Name = "Lokalizacja")]
         [Required]
